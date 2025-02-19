@@ -8,12 +8,40 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/cajon_texto_vista"
+        android:layout_width="79dp"
+        android:layout_height="22dp"
         android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/entrada_de_texto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/boton_magico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entrada_de_texto" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="385dp">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/entrada_de_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="lo que quieras"
+        app:layout_constraintBottom_toTopOf="@+id/boton_magico"
+        app:layout_constraintTop_toBottomOf="@+id/cajon_texto_vista"
+        tools:layout_editor_absoluteX="7dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
